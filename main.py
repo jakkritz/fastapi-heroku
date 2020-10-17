@@ -14,10 +14,9 @@ import dash_html_components as html
 class Link(BaseModel):
     title: str
     url: str
-    description: Optional[str] = None
 
 
-# Create the Dash application, make sure to adjust requests_pathname_prefx
+# Create the Dash application, make sure to adjust requests_pathname_prefix
 app_dash = dash.Dash(__name__, requests_pathname_prefix='/dash/')
 app_dash.layout = html.Div(children=[
     html.H1(children='Hello Dash'),
