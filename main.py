@@ -45,7 +45,10 @@ app = FastAPI()
 
 @app.get("/")
 def read_root():
-    link_list: Links = [{title: "api-test-routes", url: "https://fastapi-prototyping.herokuapp.com/docs"}]
+    link_list: Links = [{'title': "api-test-routes",
+                         'url': "https://fastapi-prototyping.herokuapp.com/docs"},
+                        {'title': 'supermarket-dashboard',
+                         'url': 'https://fastapi-prototyping.herokuapp.com/dash'}]
     return JSONResponse(content=jsonable_encoder(link_list))
 
 
